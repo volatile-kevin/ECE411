@@ -1,0 +1,10 @@
+import rv32i_types::rv32i_word;
+import stage_ports::*;
+
+module IDEX
+(
+
+);
+
+
+endmodule : IDEX

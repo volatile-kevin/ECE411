@@ -1,0 +1,18 @@
+
+State Machine - |mp4|icache:instruction_cache|icache_control:control|state
+Name state.check_hit state.prefetch state.read_mem 
+state.check_hit 0 0 0 
+state.read_mem 1 0 1 
+state.prefetch 1 1 0 
+
+State Machine - |mp4|dcache:data_cache|dcache_control:control|state
+Name state.read_mem 
+state.check_hit 0 
+state.read_mem 1 
+
+State Machine - |mp4|arbiter:arbiter|state
+Name state.INST_DATA state.INST_ONLY state.IDLE state.DATA_ONLY 
+state.IDLE 0 0 0 0 
+state.INST_ONLY 0 1 1 0 
+state.INST_DATA 1 0 1 0 
+state.DATA_ONLY 0 0 1 1 

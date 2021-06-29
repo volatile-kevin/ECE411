@@ -1,0 +1,11 @@
+import rv32i_types::rv32i_word;
+import rv32i_types::rv32i_opcode;
+import stage_ports::*;
+
+module mem
+(
+    input clk,
+    input rst,
+    input logic mem_read,
+    input logic mem_write,
+    

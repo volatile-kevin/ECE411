@@ -1,0 +1,17 @@
+import rv32i_types::rv32i_word;
+import stage_ports::*;
+
+module writeback
+(
+	input rv32i_word WB_i,
+	input rv32i_word mem_rdata_i,
+	input rv32i_word alu_out_i,
+	input logic [4:0] rd_i,
+	
+	output rv32i_word WB_o,
+	output rv32i_word mem_rdata_o,
+	output rv32i_word alu_out_o,
+	output logic [4:0] rd_o
+);
+
+endmodule : MEMWB

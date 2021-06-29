@@ -1,0 +1,12 @@
+import rv32i_types::rv32i_word;
+import stage_ports::*;
+
+module WB
+(
+	input rv32i_word WB;
+
+	input rv32i_word mem_rdata;
+	input rv32i_word addr;
+);
+
+endmodule : WB

@@ -1,0 +1,33 @@
+import rv32i_types::*;
+import stage_ports::*;
+
+module FU
+(   
+    input logic clk,
+    input logic rst,
+    input logic [4:0] rs1_i,
+    input logic [4:0] rs2_i,
+    input logic [4:0] EXMEM_rd_i,
+    input logic [4:0] MEMWB_rd_i,
+    input logic EXMEM_reg_write_i,
+    input logic MEMWB_reg_write_i,
+
+    output forwardAmux::forwardAmux_sel_t forwardAmux_sel,
+    output forwardAmux::forwardBmux_sel_t forwardBmux_sel,
+
+    output logic [1:0] forwardBmux_sel
+);
+
+always_comb
+begin
+    if(EXMEM_reg_write_i && !EXMEM_rd_i && (EXMEM_rd_i == rs1_i))
+        // forwardAmux_sel = forwardAmux::
+    if(EXMEM_reg_write_i && !EXMEM_rd_i && (EXMEM_rd_i == rs2_i))
+        // forwardBmux_sel = forwardBmux::
+    if(MEMWB_reg_write_i && !EXMEM_rd_i && (EXMEM_rd_i == rs1_i))
+
+    if(MEMWB_reg_write_i && !EXMEM_rd_i && (EXMEM_rd_i == rs2_i))
+
+end
+
+endmodule : FU
